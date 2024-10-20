@@ -44,7 +44,6 @@ body {
   border: 3px solid var(--bg-color);
 }
 
-
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -256,7 +255,7 @@ main {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
 }
-.filter button.active{
+.filter button.active {
   background-color: var(--warning-color);
   color: var(--bg-color);
 }
@@ -274,7 +273,7 @@ main {
     margin: auto;
     padding: 1rem 0.5rem;
   }
-  .all-todos{
+  .all-todos {
     height: 60vh;
   }
   .title {
