@@ -19,7 +19,7 @@ const ThemeToggler = () => {
   }, [theme]);
 
   return (
-    <button onClick={handleTheme} className="theme-toggler">
+    <button onClick={handleTheme} className="theme-toggler" aria-label="Toggle Theme">
       <div className="icons-holder">
         {theme === "dark" ? (
           <SunIcon className="sunIcon toggler-icons" />

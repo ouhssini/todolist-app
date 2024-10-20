@@ -258,6 +258,7 @@ main {
 }
 .filter button.active{
   background-color: var(--warning-color);
+  color: var(--bg-color);
 }
 /* media queries for responsive */
 @media (max-width: 768px) {
