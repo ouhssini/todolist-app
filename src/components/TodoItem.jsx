@@ -1,4 +1,6 @@
+import { AcademicCapIcon } from "@heroicons/react/24/solid";
 import React, { Component } from "react";
+import { toast } from "react-toastify";
 
 const TodoItem = ({ todo, Alltodos, setAllTodos }) => {
   const handleStatue = () => {
@@ -10,9 +12,11 @@ const TodoItem = ({ todo, Alltodos, setAllTodos }) => {
         return item;
       })
     );
+    toast.success("Todo Status Changed");
   };
   const handleDelet = (id) => {
     setAllTodos(Alltodos.filter((item) => item.id !== id));
+    toast.info("Todo Deleted Successfully");
   };
 
   return (

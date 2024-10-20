@@ -3,6 +3,9 @@ import Filter from "./components/Filter";
 import Header from "./components/Header";
 import Input from "./components/Input";
 import TodoItem from "./components/TodoItem";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const [filter, setFilter] = useState('all')
@@ -17,6 +20,7 @@ function App() {
   const [todos, setTodos] = useState(Alltodos);
   return (
     <>
+    <ToastContainer />
       <Header />
       <main className="main container">
         <div className="side">
@@ -27,6 +31,7 @@ function App() {
           {todos.length === 0 && (
             <p className="no-todos">Nothing To show right Now</p>
           )}
+         {todos.length > 0 && <h2 className="todos-count">You Have {todos.length} Todos</h2>}
           {todos.map((todo) => {
             return <TodoItem todo={todo} key={todo.id} Alltodos={Alltodos} setAllTodos={setAllTodos} />;
           })}

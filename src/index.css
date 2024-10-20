@@ -166,6 +166,13 @@ main {
   height: 80vh;
   overflow-y: scroll;
 }
+.todos-count{
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom:1rem ;
+  font-weight: 700;
+  color: var(--warning-color);
+}
 .side {
   flex-basis: 180px;
   justify-items: center;
