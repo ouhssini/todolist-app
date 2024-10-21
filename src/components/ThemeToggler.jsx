@@ -5,21 +5,20 @@ import { ThemeContext } from "../context/Context";
 const ThemeToggler = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const handleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      setTheme("light");
-      localStorage.setItem("theme", "light");
-    }
+    const Theme = theme === "light" ? "dark" : "light";
+    setTheme(Theme);
+    localStorage.setItem("theme", Theme);
   };
-
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
   return (
-    <button onClick={handleTheme} className="theme-toggler" aria-label="Toggle Theme">
+    <button
+      onClick={handleTheme}
+      className="theme-toggler"
+      aria-label="Toggle Theme"
+    >
       <div className="icons-holder">
         {theme === "dark" ? (
           <SunIcon className="sunIcon toggler-icons" />
