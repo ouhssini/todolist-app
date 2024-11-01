@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 const Input = ({ Alltodos, setAllTodos }) => {
   const handleAdd = () => {
     const input = document.querySelector("input");
-    if (input.value) {
+    if (input.value.trim() !== "") {
       const newTodo = {
         id: new Date().getTime().toString(),
         text: input.value,
