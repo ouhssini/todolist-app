@@ -2,6 +2,7 @@ import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 import React, { useEffect } from "react";
 import { toast } from "react-toastify";
 
+
 const Input = ({ Alltodos, setAllTodos }) => {
   const handleAdd = () => {
     const input = document.querySelector("input");
